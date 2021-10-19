@@ -1,0 +1,378 @@
+.main{
+
+}
+
+.header{
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.navbar-icon-link{
+    font-size: 1.8rem;
+    margin: 0 4px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__list{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.navbar__list-item{
+    position: relative;
+    margin: 0 8px;
+    min-height: 26px;
+}
+
+.navbar__list-item,
+.item-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+.navbar__list-item,
+.item-link,
+.navbar-icon{
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar__list-item:hover,
+.item-link:hover,
+.navbar-icon:hover{
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+
+@keyframes headerNotify{
+    from{
+        opacity: 0;
+        transform: scale(0);    
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);         
+    }
+}
+
+.navbar-item-no-pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+
+.navbar-icon{
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.link--bold{
+    font-weight: 400;
+}
+
+.item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #ccc;
+    height: 12px;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* header QR code */
+.header__maQR{
+    width: 186px;
+    background: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 120%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in .5s;
+}
+.header__maQR::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 18%;
+    left: 0;
+    top: -18px;
+}
+.navbar--showQR:hover .header__maQR{
+    display: block;
+}
+.maQR{
+    width: 100%;
+}
+
+.header__maQR--app{
+    justify-content: space-between;
+    display: flex;
+}
+
+.header_QR--link{
+    margin-left: 11px;
+}
+.header_QR--link + .header_QR--link{
+    margin-left: 0px;
+    margin-right: 11px;
+}
+
+.header__QR--image{
+    height: 15px;
+}
+
+.header__notify{
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 404px;
+    border: 1px solid #d3d3d3;
+    background-color: var(--white-color);
+    display: none;
+    cursor: default;
+}
+
+.header__notify::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6%;
+    right: 2%;
+    border: 20px solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    cursor: pointer;
+}
+.item-link-notify:hover
+
+.header__notify::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2%;
+    right: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.notify-hover:hover .header__notify{
+    display: block;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotify ease-in .2s;
+}
+.notify-img{
+    width: 100%;
+    max-width: 50px;
+}
+.notify--header{
+    height: 40px;
+    background-color: var(--white-color);
+}
+.notify--header h3{
+    color: #888;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    user-select: none;
+}
+
+.notify--list{
+    padding-left: 0;
+
+}
+
+.notify--item--viewed{
+    background-color: rgba(238,75,43,0.08);
+}
+.notify__list--link:hover{
+    background-color: rgba(172, 166, 166, 0.08);
+}
+.notify-info{
+    padding: 6px 0px 6px 12px;
+}
+
+.notify__list--link {
+    padding: 12px;
+    display: flex;
+    text-decoration: none;
+
+}
+
+.notify--name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 400;
+}
+
+.notify--des{
+    display: block;
+    margin-top: 12px;
+    font-size: 1.2rem;
+    color: rgb(143, 127, 127);
+}
+
+.notify-footer{
+    text-align: center; 
+    padding: 12px 0;
+}
+
+.notify-footer--btn{
+   
+    text-decoration: none;
+    color: var(--text-color);
+}
+/* modal */
+.auth-form{
+    width: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--white-color);
+}
+.auth-form__container{
+    padding: 0 32px;
+}
+
+.auth-form__header{
+    padding: 0 12px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-form__witch-btn{
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.auth-form__body{
+    
+}
+.auth-form__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border--color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.auth-form__input:focus{
+    border: 1px solid #888;
+}
+
+.auth-form__aside{
+    margin-top: 18px;
+}
+
+.auth-form__policy-text{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.auth-form__text-link{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.auth-form__controls{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.control--back{
+    margin-right: 8px;
+    background-color: var(--white-color);
+}
+.control--back:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.auth-form__socials{
+    margin-top: 32px;
+    background-color: #f5f5f5;
+    padding: 12px 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social--icon{
+    font-size: 1.8rem;
+    padding: 0 0 0 12px ;
+}
+
+.socials--facebook{
+    color: var(--white-color);
+    background-color: #3A5A98;
+}
+
+.socials--facebook.btn{
+    color: var(--white-color);
+}
+.socials--facebook,
+.socials--google{
+    display: flex;
+    align-items: center;
+}
+.socials--google{
+    background-color: var(--white-color);
+    color: #666;
+}
+.social--text{
+    padding: 0 38px;
+}
+
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+
+.auth-form__help-separate{
+    display: block;
+    height: 15px;
+    border-left: 1px solid #cecaca;
+    margin: 0 16px;
+}
+
+.help--fogot{
+    color: var(--primary-color);
+}
+/*  */
+.container{
+
+}
+
+.footer{
+
+}
