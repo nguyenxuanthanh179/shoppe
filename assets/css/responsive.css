@@ -34,6 +34,12 @@
     .header__sort-item--active .header__sort-link{
         color: var(--primary-color);
     }
+    .app__content{
+        padding-top: 8px;
+    }
+    .mobile-category{
+        display: block;
+    }
 }
 
 /* table */
@@ -92,8 +98,13 @@
         min-width: 36px;
     
     }
-    .app__container{
-        margin: 0 4px;
+    
+    .footer__content{
+        padding: 0 16px;
+    }
+    .header__logo{
+        width: 110px;
+        margin-right: 50px;
     }
 
     @keyframes mobileSearch {
