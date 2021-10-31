@@ -10,15 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 <body>
     <div class="main">
         <header class="header">
-            <div class="grid">
-                <nav class="navbar">
+            <div class=" wide grid ">
+                <nav class="navbar hide-on-mobile-tablet">
                     <ul class="navbar__list">
                         <li class="navbar__list-item item--separate navbar--showQR">
                             Vào cửa hàng trên ứng dụng Shoppe
@@ -141,9 +143,14 @@
                         </li>
                     </ul>
                 </nav>
-
                 <div class="header__with--search">
+                    <!-- mobile search -->
+                    <label for="mobile-search-checkbox" class="header-mobile-search">
+                        <i class="fas fa-search header-mobile-search-icon"></i>
+                    </label>
                     
+                    
+                    <!-- end -->
                     <div class="header__logo">
                         <a href="/" class="logo-link">
                             <svg viewBox="0 0 192 65" class="logo--shoppe">
@@ -153,8 +160,8 @@
                             </svg> 
                         </a> 
                     </div>
-
-                    <div class="header__search">
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+                    <div class="header__search ">
                         <div class="header__search--input-wrap">
                             <input type="text" class="header__search--input" placeholder="Nhập để tìm kiếm sản phẩm"></input>
                             <div class="header__search--history">
@@ -260,120 +267,6 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/shopee.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-infor">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-des">
-                                                    phân loại: Bạc
-                                                </span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/shopee.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-infor">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-des">
-                                                    phân loại: Bạc
-                                                </span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/shopee.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-infor">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-des">
-                                                    phân loại: Bạc
-                                                </span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/shopee.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-infor">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-des">
-                                                    phân loại: Bạc
-                                                </span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/shopee.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-infor">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-des">
-                                                    phân loại: Bạc
-                                                </span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/shopee.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-infor">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000</span>
-                                                    <span class="header__cart-item-multiply">x</span>
-                                                    <span class="header__cart-item-qnt">2</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-des">
-                                                    phân loại: Bạc
-                                                </span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
                                 </ul>
 
                                 <button class="btn btn--primary header__cart-view">Xem giỏ hàng</button>
@@ -383,13 +276,27 @@
                 
                 </div>      
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active ">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
 
         </header>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class=" wide grid ">
+                <div class="row sm-gutter app__content ">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">
                                 <i class="category__heading-icon fas fa-list"></i>
@@ -408,9 +315,9 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid__column-10">
+                    <div class="col l-10 m-12 c-12">
 
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="btn home-filter__btn">Phổ biến</button>
                             <button class="btn btn--primary home-filter__btn">Mới nhất</button>
@@ -444,9 +351,69 @@
                             </div>
                         </div>
 
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="grid__row">
-                                <div class="grid__column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -487,7 +454,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -528,7 +495,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -569,7 +536,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -610,7 +577,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -651,7 +618,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -692,7 +659,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -733,7 +700,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -774,7 +741,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -815,7 +782,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="product-item_img" style="background-image: url('https://cf.shopee.vn/file/f307555f8c3313b93e674344dac6f40d_tn');"></div>
                                         <h4 class="product-item_name">Giày air Jordan 1 cao cổ, Giày JD1 high nam nữ các màu hot nhất Full box bill</h4>
@@ -899,9 +866,9 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
+            <div class=" wide grid ">
                 <div class="grid__row">
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -915,7 +882,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -929,7 +896,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -943,7 +910,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -966,7 +933,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer-download">
                             <img src="./assets/img/maQR.png" alt="" class="footer-download-qr">
@@ -984,7 +951,7 @@
                 </div>
             </div>
             <div class="footer__bottom">               
-                <div class="grid">
+                <div class=" wide grid ">
                     <p class="footer__text">2021 - Bản quyền thuộc về ThanhCris</p>
                 </div>
             </div>
